@@ -28,7 +28,9 @@ class App extends React.Component {
 
 
   componentDidMount(){
-    this.setState({items:["Batata","Frango","Tomate","Arroz"]});
+    setTimeout(
+    ()=> this.setState({items:["Batata","Frango","Tomate","Arroz"]}),2000  
+    );
   }
 
   render(){
@@ -39,7 +41,7 @@ class App extends React.Component {
     }
     else{
     FilteredList = this.state.items.filter((ele) => {
-                          return ele.includes(this.state.input);
+                          return ele.toUpperCase().includes(this.state.input.toUpperCase());
                         });
     }               
   return (
