@@ -21,7 +21,7 @@ class App extends React.Component {
     return(
     <div>
       <textarea value= {this.state.post} onChange = {(event)=> this.HandleChange(event.target.value)}>
-      </textarea>  
+      </textarea>  SS
       <button>Publicar</button>
     </div>
   );
